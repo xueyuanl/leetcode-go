@@ -1,4 +1,4 @@
-package main
+package src
 
 import (
 	"fmt"
@@ -29,12 +29,12 @@ func toLowerCase(str string) string {
 }
 
 /*A better solution*/
-/*func toLowerCase(str string) string {
+/*func toLowerCase(str stringutil) stringutil {
 	r:=[]rune(str)
 	for i:=0;i<len(r);i++{
 		if r[i]<=90&&r[i]>=65 {
 			r[i]+=32
 		}
 	}
-	return string(r)
+	return stringutil(r)
 }*/
