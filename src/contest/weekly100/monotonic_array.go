@@ -1,4 +1,4 @@
-package src
+package weekly100
 
 func main() {
 	
