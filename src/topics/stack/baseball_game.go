@@ -1,7 +1,8 @@
-package array
+package stack
 
 import (
 	"strconv"
+	. "data-structure"
 )
 
 func calPoints(ops []string) int {
@@ -30,41 +31,4 @@ func calPoints(ops []string) int {
 		res += stack.Pop().(int)
 	}
 	return res
-}
-
-type Stack struct {
-	top *Element
-
-	size int
-}
-
-type Element struct {
-	Value  interface{}
-	Before *Element
-}
-
-func (s *Stack) Len() int {
-	return s.size
-}
-
-func (s *Stack) Top() interface{} {
-	if s.size > 0 {
-		return s.top
-	}
-	return nil
-}
-
-func (s *Stack) Push(value interface{}) {
-	s.top = &Element{value, s.top}
-	s.size ++
-}
-
-func (s *Stack) Pop() interface{} {
-	if s.size > 0 {
-		value := s.top.Value
-		s.top = s.top.Before
-		s.size --
-		return value
-	}
-	return nil
 }
