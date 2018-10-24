@@ -16,7 +16,7 @@ func minFlipsMonoIncr(S string) int {
 			one = 1 + min(one, zero)
 			zero = zero
 		} else {
-			one = min(one, zero) // this two lines 
+			one = min(one, zero) // this two lines cannot change order
 			zero = 1 + zero
 
 		}
