@@ -1,8 +1,6 @@
-package src
+package list
 
-func main() {
-
-}
+import . "basic"
 
 func middleNode(head *ListNode) *ListNode {
 
@@ -24,9 +22,4 @@ func middleNode(head *ListNode) *ListNode {
 		return slow.Next
 	}
 
-}
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
 }
